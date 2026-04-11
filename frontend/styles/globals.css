@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --avax-red: #E84142;
+  --avax-dark: #0F0F0F;
+  --avax-card: #161616;
+  --avax-border: #2A2A2A;
+  --avax-muted: #666666;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: #0F0F0F;
+  color: #F0F0F0;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0F0F0F; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #E84142; }
+
+/* Focus rings */
+:focus-visible { outline: 2px solid #E84142; outline-offset: 2px; }
+
+.glass {
+  background: rgba(22, 22, 22, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid #2A2A2A;
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(232, 65, 66, 0.15);
+}
+
+/* Chain status pill */
+.status-pending  { @apply bg-yellow-500/10 text-yellow-400 border border-yellow-500/20; }
+.status-onchain  { @apply bg-green-500/10  text-green-400  border border-green-500/20; }
+.status-error    { @apply bg-red-500/10    text-red-400    border border-red-500/20; }
+
+/* Score bar */
+.score-bar {
+  height: 4px;
+  border-radius: 2px;
+  background: #2A2A2A;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #E84142, #FF6B6C);
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
