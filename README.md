@@ -302,36 +302,6 @@ curl -X POST http://localhost:4000/api/finalize \
 
 ---
 
-## 3-Hour Build Order
-
-### Hour 1 — Contract + Deploy (60 min)
-- [ ] 0:00 Set up repo, `npm install` (10 min)
-- [ ] 0:10 Write + compile `HackathonJudge.sol` (20 min)
-- [ ] 0:30 Run `npx hardhat test` (5 min)
-- [ ] 0:35 Fund wallet from Fuji faucet (5 min)
-- [ ] 0:40 `npx hardhat run scripts/deploy.js --network fuji` (5 min)
-- [ ] 0:45 Verify on Snowtrace (10 min, optional)
-- [ ] 0:55 Register judge wallets (5 min)
-
-### Hour 2 — Backend (60 min)
-- [ ] 1:00 Set up Express server, copy ABI + deployment.json (10 min)
-- [ ] 1:10 Implement `POST /api/submit` (15 min)
-- [ ] 1:25 Implement `GET /api/submissions` + `GET /api/submissions/:id` (10 min)
-- [ ] 1:35 Implement `POST /api/score` (10 min)
-- [ ] 1:45 Implement `GET /api/leaderboard` (10 min)
-- [ ] 1:55 Manual test with curl (5 min)
-
-### Hour 3 — Frontend + Polish (60 min)
-- [ ] 2:00 Scaffold Next.js, Tailwind, globals.css (10 min)
-- [ ] 2:10 Build Navbar + TxBadge + ScoreBar components (10 min)
-- [ ] 2:20 Home page (5 min)
-- [ ] 2:25 Submit form page (10 min)
-- [ ] 2:35 Judge dashboard (10 min)
-- [ ] 2:45 Leaderboard page (10 min)
-- [ ] 2:55 Submission detail page (5 min)
-
----
-
 ## Production Upgrade Notes (post-hackathon)
 
 | Current (demo)                          | Production                                |
